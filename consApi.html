@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Consumindo API</h1>
+    <h2>Como resposta da atividade proposta segue a entrega usando uma api futebol
+        ligando o tema da 1ª atividade, onde mostra as informações
+        de todos os jogos da ultima Copa do Mundo em 2018
+    </h2>
+    <h4>P.S.: O nosso tema da primeira atividade foi Eventos</h4>
+    <script>
+        fetch('https://app.sportdataapi.com/api/v1/soccer/matches?apikey=0e0b7b80-7885-11ed-aa3c-69b1790fa5a3&season_id=1193')
+            .then(function (response) {
+                return response.json()
+            }).then(function (data) {
+                console.log(data)
+            })
+            
+            /*const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+		'X-RapidAPI-Host': 'events-happened-in-world.p.rapidapi.com'
+	}
+};
+
+fetch('https://events-happened-in-world.p.rapidapi.com/search?date=5&month=4&limit=5', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));*/
+    </script>
+</body>
+
+</html>
